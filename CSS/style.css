@@ -1,3 +1,196 @@
-.try{
-    color: red;
+/* GOOGLE FONT => GRAND-HOTEL AND CATAMARAN */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;800&family=Grand+Hotel&display=swap');
+/* CSS GLOBAL VARIABLES */
+:root{
+    --clr-primary: #678e3e;
+    --clr-primary-light: #beed8c;
+    --clr-grey-1: #102a42;
+    --clr-grey-5: #617d98;
+    --clr-grey-10: #f1f5f8;
+    --ff-Grand: 'Grand Hotel', cursive;
+    --ff-Cata: 'Catamaran', sans-serif;
+    --transition: all .3s linear;
+    --radius: 0.5rem;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+}
+.clearfix::before,
+.clearfix::after
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.section-center{
+    width: 1170px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+.btn{
+    background-color: var(--clr-primary);
+    color: white;
+    padding: .5rem 1.7rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: var(--ff-Cata);
+    margin-top: 1.5rem;
+    display: inline-block;
+    outline: 3px solid var(--clr-primary);
+    outline-offset: 3px;
+    font-size: 1.7rem;
+    transition: var(--transition);
+}
+.btn:hover{
+    background-color: var(--clr-primary-light);
+    color: var(--clr-primary);
+}
+/* MAINT ETRY */
+.hero{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),url("../imgs/main-bcg.jpeg") center/cover no-repeat fixed;
+    position: relative;
+}
+.banner{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    /* border: 3px solid red; */
+}
+.top-main-title{
+    color: var(--clr-primary);
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-family: var(--ff-Grand);
+}
+.bottom-main-title{
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: var(--ff-Cata);
+}
+/* END OF MAINT ETRY */
+/* LINEAR DIVIDER */
+.divider{
+    height: .4rem;
+    background: linear-gradient(to left, var(--clr-primary), yellow, var(--clr-primary));
+}
+/* END OF LINEAR DIVIDER */
+/* CATEGORIES */
+.categories{
+    background-color: var(--clr-grey-10);
+}
+.category{
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--transition);
+}
+.category:hover{
+    background-color: white;
+    box-shadow: 0px 3px 0px var(--clr-primary);
+}
+.category-icon{
+    font-size: 2rem;
+    color: var(--clr-primary);
+    display: inline-block;
+    transition: var(--transition);
+}
+.category-title{
+    text-transform: uppercase;
+}
+.category-text{
+    max-width: 20rem;
+    color: var(--clr-grey-5);
+    margin: 0 auto;
+}
+.category:hover .category-icon{
+    transform: translateY(-10px);
+}
+@media screen and (min-width: 578px){
+    .category{
+        float: left;
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .category{
+        float: left;
+        width: 25%;
+    }
+}
+/* END OF CATEGORIES */
+/* ABOUT */
+.about{
+    max-width: 1170px;
+    width: 85vw;
+    margin: 0 auto;
+}
+.about-img{
+    padding: 2rem 0;
+}
+.about-info{
+    padding: 2rem 0;
+    letter-spacing: 1.5px;
+}
+.about-img-container{
+    background: var(--clr-primary);
+    border: .5rem solid var(--clr-primary);
+    overflow: hidden;
+    max-width: 30rem;
+}
+.img-self{
+    transition: var(--transition);
+}
+.about-img-container:hover .img-self{
+    opacity: .7;
+    transform: scale(1.3);
+}
+.about-top-title{
+    font-family: var(--ff-Grand);
+    text-transform: capitalize;
+    color: var(--clr-primary);
+    font-size: 2rem;
+}
+.about-bottom-title{
+    font-family: var(--ff-Cata);
+    text-transform: uppercase;
+    font-size: 2.1rem;
+}
+.about-text{
+    max-width: 22rem;
+    color: var(--clr-grey-5);
+}
+.btnLearnMore{
+    font-size: 1rem;
+    outline: none;
+}
+@media screen and (min-width: 992px){
+    .about-img,
+    .about-info{
+        float: left;
+        width: 50%;
+    }
+    .about-info{
+        padding-left: 1.5rem;
+    }
+}
+/* END OF ABOUT */
+/* PRODUCTS */
+
+/* END OF PRODUCTS */
