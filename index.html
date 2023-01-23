@@ -15,14 +15,39 @@
 </head>
 
 <body>
+    <!-- NAVBUTTON -->
+    <span id="navBtn" class="navBtn">
+        <i class="fa-solid fa-bars"></i>
+    </span>
+    <!-- END OF NAVBUTTON -->
+    <!-- NAV SIDE -->
+    <nav class="navBar" id="navBar">
+        <div class="navbarBtnSide">
+            <span class="navClose" id="navClose">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+        </div>
+        <ul class="nav-items">
+            <li><a class="nav-item" href="#">home</a></li>
+            <li><a class="nav-item" href="#">skills</a></li>
+            <li><a class="nav-item" href="#">about</a></li>
+            <li><a class="nav-item" href="#">products</a></li>
+        </ul>
+    </nav>
+    <!-- END OF NAV SIDE -->
     <!-- MAIN ENTRY -->
-    <section class="hero">
+    <header class="hero">
         <div class="banner">
             <h3 class="top-main-title">over one hundred <br> flavors of</h2>
                 <h2 class="bottom-main-title">specially <br> crafted tea</h2>
                 <a class="btn explore" href="">explore</a>
         </div>
-    </section>
+        <div class="scroll-down-side">
+            <span class="scroll-down">
+                <i class="fa-solid fa-angles-down"></i>
+            </span>
+        </div>
+    </header>
     <!-- END OF MAIN ENTRY -->
     <!-- LINEAR DIVIDE -->
     <div class="divider"></div>
@@ -65,7 +90,7 @@
     <!-- END OF CATEGORIES -->
     <!-- ABOUT -->
     <section class="about">
-        <div class="section-center clearfix">
+        <div class="about-center clearfix">
             <article class="about-img">
                 <div class="about-img-container">
                     <img class="img-self" src="imgs/about-bcg.jpeg" alt="About Image">
@@ -208,7 +233,7 @@
                         <i class="fas fa-phone"></i>
                     </span>
                     telephone
-                    <h3 class="real-info">(90+) 555 555 55 55</h3>
+                    <h3 class="real-info">090+) 555 555 55 55</h3>
                 </h4>
             </article>
             <article class="contact-form">
@@ -217,7 +242,7 @@
                     <div class="form-group">
                         <input class="form-control" type="text" name="name" placeholder="name">
                         <input class="form-control" type="email" name="email" placeholder="email">
-                        <textarea class="form-control" name="message" id="message" rows="10"
+                        <textarea id="textarea" class="form-control" name="message" id="message" rows="10"
                             placeholder="message"></textarea>
                     </div>
                     <button class="contactSubmitBtn">submit here</button>
@@ -253,5 +278,5 @@
     </footer>
     <!-- END OF FOOTER -->
 </body>
-
+<script src="JS/index.js"></script>
 </html>
