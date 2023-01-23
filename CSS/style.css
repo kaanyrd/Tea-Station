@@ -12,6 +12,9 @@
     --transition: all .3s linear;
     --radius: 0.5rem;
 }
+.forScroll{
+    overflow-x: hidden;
+}
 *{
     margin: 0;
     padding: 0;
@@ -39,6 +42,7 @@ img{
     width: 90vw;
     margin: 0 auto;
     padding: 4rem 0;
+    overflow-x: hidden;
 }
 .btn{
     background-color: var(--clr-primary);
@@ -135,6 +139,7 @@ img{
     min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),url("../imgs/main-bcg.jpeg") center/cover no-repeat fixed;
     position: relative;
+    overflow-x: hidden;
 }
 .banner{
     top: 50%;
@@ -149,12 +154,20 @@ img{
     text-transform: capitalize;
     font-size: 2rem;
     font-family: var(--ff-Grand);
+    animation-name: topTitleMoving;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .bottom-main-title{
     color: white;
     text-transform: uppercase;
     font-size: 3rem;
     font-family: var(--ff-Cata);
+    animation-name: bottomTitleMoving;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .scroll-down-side{
     /* transform: translate(-50%, -50%); */
@@ -167,7 +180,7 @@ img{
     font-size: 2.3rem;
     color: var(--clr-primary);
     animation-name: scrollDown;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
 }
 /* END OF MAINT ETRY */
@@ -259,6 +272,8 @@ img{
     font-family: var(--ff-Cata);
     text-transform: uppercase;
     font-size: 2.1rem;
+    animation-name: bottomTitleMoving;
+    animation-duration: 2s;
 }
 .about-text{
     max-width: 22rem;
@@ -625,6 +640,34 @@ img{
     }
     100%{
         transform: scale(1);
+    }
+}
+@keyframes topTitleMoving {
+    0%{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(150px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes bottomTitleMoving {
+    0%{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-150px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
     }
 }
 /* END OF ANIMATIONS */
