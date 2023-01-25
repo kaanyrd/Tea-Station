@@ -1,4 +1,5 @@
 # Tea-Station
+## I just used basic CSS elements because i wanted to see my capacity at this basics knowledge without FLEXBOX AND GRID system.
 # For Netlify Link:
 ## https://tea-station-site.netlify.app
 I responsively redesigned a sample website. I tried to use the features of CSS as much as possible.
